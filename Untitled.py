@@ -55,10 +55,10 @@ Cards = st.number_input('Cards')
 
 Student = st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes','No'))
 st.write('You selected:', Student)
-if Student = 'Yes':
+if Student == 'Yes':
     Student = 1
 else:
-    Student = 0
+    Student == 0
     
 
 pred = predictions(Income , Rating , Cards , Student)
