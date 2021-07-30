@@ -20,7 +20,7 @@ def image_load():
 
 
 
-#@st.cache(persist=True)
+#@st.cache(allow_output_mutation=True)
 def user_input_features(Income, Rating, Cards, Student):
 
 
