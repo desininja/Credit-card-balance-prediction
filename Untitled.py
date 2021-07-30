@@ -9,7 +9,7 @@ import plotly.express as px
 import pickle
 from PIL import Image
 
-# file location:   /Users/HB/Desktop/python/Job-internship assessments/spark_grip
+
 
 
 st.title("CREDIT CARD BALANCE PREDICTION MODEL")
@@ -21,21 +21,9 @@ def image_load():
 
 
 #@st.cache(persist=True)
-def user_input_features():
-
-    
-    Income = st.number_input('Income')       
-
-    Rating = st.number_input('Rating')
-    Cards = st.number_input('Cards')
+def user_input_features(Income, Rating, Cards, Student):
 
 
-    Student = st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes','No'))
-    #st.write('You selected:', Student)
-    if Student == 'Yes':
-        Student = 1
-    elif Student == 'No':
-        Student = 0
 
     data = {'Income': [Income],'Rating': [Rating],'Cards': [Cards],'Student': [Student]}
     data = pd.DataFrame.from_dict(data)
@@ -47,7 +35,17 @@ def user_input_features():
     
     return X1
 
-input_df = user_input_features()
+Income = st.number_input('Income')       
+Rating = st.number_input('Rating')
+Cards = st.number_input('Cards')
+Student = st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes','No'))
+    #st.write('You selected:', Student)
+    if Student == 'Yes':
+        Student = 1
+    elif Student == 'No':
+        Student = 0
+
+input_df = user_input_features(Income, Rating, Cards, Student)
 
 filename = 'finalized_model.sav'
 lm = pickle.load(open(filename, 'rb'))
