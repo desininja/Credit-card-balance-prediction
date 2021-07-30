@@ -53,7 +53,7 @@ Rating = st.number_input('Rating')
 Cards = st.number_input('Cards')
 
 
-Student = st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes','No'))
+Student = st.text_input(st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes','No')))
 st.write('You selected:', Student)
 if Student == 'Yes':
     Student = 1
