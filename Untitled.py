@@ -5,7 +5,7 @@ import plotly.express as px
 
 
 
-#@st.cache(persist=True)
+
 import pickle
 from PIL import Image
 
@@ -18,13 +18,9 @@ def image_load():
     image = Image.open('study_image.jpg')
     st.image(image, caption='Know Your Balance!',use_column_width=True)
 
-#image_load()
+
 
 #@st.cache(persist=True)
-
-
-
-
 def user_input_features():
 
     
