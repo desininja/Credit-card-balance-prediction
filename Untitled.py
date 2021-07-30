@@ -5,7 +5,7 @@ import plotly.express as px
 
 
 
-
+#@st.cache(persist=True)
 import pickle
 from PIL import Image
 
