@@ -58,7 +58,7 @@ Student = st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes
 if Student == 'Yes':
     Student = 1
 elif Student == 'No':
-    Student == 0
+    Student = 0
     
 
 pred = predictions(Income , Rating , Cards , Student)
