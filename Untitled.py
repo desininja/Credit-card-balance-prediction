@@ -57,7 +57,7 @@ Student = st.selectbox('Please Enter Yes if you are student, otherwise No',('Yes
 #st.write('You selected:', Student)
 if Student == 'Yes':
     Student = 1
-else:
+elif Student == 'No':
     Student == 0
     
 
